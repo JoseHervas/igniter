@@ -24,9 +24,7 @@ The general User Interface is stylized with the Qlik style using Leonardo-UI. Ev
 4.) npm install && npm start
 ```
 
-<img style="-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);" src="screenshot.PNG"/>
+![demo](screenshot.PNG?classes=shadow)
 
 You can navigate to http://localhost:3000/ and see your dashboard. Remember to run `npm run build` if you are ready to deploy your mashup.
 
