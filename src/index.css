@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.showcase, .cover{
+  height: 200px !important;
+}
+
+.intro .showcase .text {
+  margin-top: 50px !important;
+}
+
+.chart-container{
+  height:400px;
+  position: relative;
+}
+
+/* Leonardo-UI font icons. See: https://github.com/qlik-oss/leonardo-ui */
+@font-face {
+  font-family: "LUI icons";
+  src: url(../node_modules/leonardo-ui/dist/lui-icons.woff) format('woff'),
+       url(../node_modules/leonardo-ui/dist/lui-icons.ttf) format('truetype');
+}
