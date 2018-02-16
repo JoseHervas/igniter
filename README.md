@@ -14,6 +14,8 @@ By default, the app uses Enigma.js to create custom hypercubes and retrieve the 
 
 The general User Interface is stylized with the Qlik style using Leonardo-UI. Everything is articulated using components from ReactJS.
 
+<a href="https://igniter-demo.000webhostapp.com/">Live demo</a>.
+
 ## How to use
 ```
 1.) git clone https://github.com/JoseHervas/igniter your-project-folder
