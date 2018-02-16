@@ -31,7 +31,7 @@ You can navigate to http://localhost:3000/ and see your dashboard. Remember to r
 ## Next
 
 * Automated testing for the app
-* Redux for storing components' states.
+* Redux and PropTypes for components' states.
 * Store EnigmaJS & PicassoJS configuration data on external files.
 * SCSS or SASS to parameterize theme styles.
 
