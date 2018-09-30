@@ -5,14 +5,16 @@
   "dependencies": {
     "enigma.js": "^2.2.0",
     "leonardo-ui": "^1.5.1",
+    "picasso-plugin-hammer": "^0.12.2",
     "picasso.js": "^0.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-native": "^0.56.0",
     "react-scripts": "1.1.1",
     "ws": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

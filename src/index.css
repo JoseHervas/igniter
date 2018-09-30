@@ -4,10 +4,12 @@ body {
 }
 
 .showcase, .cover{
+  background-color: rgba(1, 43, 134, 0.479);
   height: 200px !important;
 }
 
 .intro .showcase .text {
+  color:rgba(112, 209, 209, 0.925);
   margin-top: 50px !important;
 }
 

@@ -1,5 +1,8 @@
-import ExampleChart from './ExampleChart.js'
-import SessionObject from './SessionObject.js'
+import tooltip from './tooltip'
+import barChart from './barChart'
+import lineChart from './lineChart'
+import pieChart from './pieChart'
+import pointChart from './pointChart'
 
-export {ExampleChart, SessionObject};
-export default {ExampleChart, SessionObject};
+export default{tooltip,barChart,lineChart,pieChart,pointChart}
+export {tooltip,barChart,lineChart,pieChart,pointChart}
