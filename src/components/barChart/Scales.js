@@ -10,7 +10,7 @@ const Scales = {
 		data: { field: 'Sales ($)' },
 		type: 'color'
 	},
-	t: { data: { extract: { field: 'Product group' } }, padding: 0.3 },
+	t: { data: { extract: { field: 'Product group' } } },
 }
 
 module.exports=Scales

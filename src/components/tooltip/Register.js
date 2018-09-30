@@ -1,3 +1,6 @@
+//registered by using this function as a tag <tooltip.Register/> 
+
+
 const picasso = require("picasso.js")
 function Register(){ picasso.component('custom-tooltip', {
     // The require property allows us to pull in our dependencies, in this case the chart instance for shape lookups and the renderer for rendering our nodes.
@@ -12,7 +15,7 @@ function Register(){ picasso.component('custom-tooltip', {
     // By defining a `on` property we're able to bind custom events to the component.
     on: {
       // From the chart instance we'll be able to emit a the `hover` event.
-      hover(e) {
+      hover(e=null) {
         const b = this.chart.element.getBoundingClientRect();
         const p = {
           x: e.clientX - b.left,
@@ -26,6 +29,9 @@ function Register(){ picasso.component('custom-tooltip', {
       this.state = { nodes: [] };
     },
     buildRow(d) {
+      try{
+      let field=null;
+      if(d.source.field){field=d.source.field}
         return [
         this.h('div',
                {
@@ -34,11 +40,12 @@ function Register(){ picasso.component('custom-tooltip', {
             "font-weight": 600,
           }
         },
-        `${d.source.field}: `),
+        `${field}: `),
         this.h('div',
             {},
           `${d.value}`)
       ];
+    }catch(e){}
     },
     buildNodes() {
       // Filter out any node that doesn't have any data bound to it or is a container node.

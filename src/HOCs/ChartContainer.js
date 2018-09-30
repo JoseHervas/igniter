@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 const picasso = require("picasso.js")
-
-
 export class ChartContainer extends Component {
 
   constructor(props){
     super(props)
    
   }  
+settings= {
+  scales: this.props.Scales,
+  components: [].concat(this.props.Component, this.props.Axis), // Concat the bar and axis' into a single array
+  interactions:[this.props.tooltip.Interactions]}
+
   componentDidMount(){
    
    	picasso.chart({
@@ -16,7 +19,7 @@ export class ChartContainer extends Component {
        settings: {
         scales: this.props.Scales,
         components: [].concat(this.props.Component, this.props.Axis), // Concat the bar and axis' into a single array
-        interactions:[this.props.tooltip.Interactions]}
+        interactions:[].concat(this.props.tooltip.Interactions)}
      });
 
   }

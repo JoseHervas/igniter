@@ -4,14 +4,14 @@ import {tooltip,pieChart,barChart,lineChart,pointChart}  from './components'
 import cubeExtractors from './cubeExtractors'
 import hyperCubeTest from './config'
 class App extends Component {
- 
-   
+componentDidMount(){
+  tooltip.Register()
+}
   render() {
     const engine = this.props.engine;
-    const Session =SessionObject;
     return (
       <div className="page">
-        <header className="header large animate">
+  <header className="header large animate">
           <div className="wrap">
             <div className="logo">
               <a href="index.html">
@@ -23,19 +23,18 @@ class App extends Component {
         </header>
         <div className="content">
           <div className="intro">
-            <div className="cover">
+          <div className="cover">
               <div className="showcase">
                 <div className="overlay">
-                  <span className="text">QlikSense using React.js with Picasso.js</span>
+                  <span className="text">Bring dashboarding to live</span>
                 </div>
               </div>
             </div>
             <div className="wrap">
-            <tooltip.Register/>
  
              <SessionObject
-                  engine={engine}
-                  chartid="chart-0"
+                  engine={this.props.engine}
+                  chartid="thepieChart"
                   HyperCubeSpecs={hyperCubeTest}
                   Component={pieChart.Component}
                   Container={ChartContainer}
@@ -45,8 +44,8 @@ class App extends Component {
                   tooltip={tooltip}
               />
               <SessionObject
-                  engine={engine}
-                  chartid="chart-1"
+                  engine={this.props.engine}
+                  chartid="barchart"
                   Component={barChart.Component}
                   Container={ChartContainer}
                   Scales={barChart.Scales}
@@ -57,8 +56,8 @@ class App extends Component {
               /> 
               
               <SessionObject
-                  engine={engine}
-                  chartid="chart-2"
+                  engine={this.props.engine}
+                  chartid="linechart"
                   HyperCubeSpecs={hyperCubeTest}
                   Component={lineChart.Component}
                   Container={ChartContainer}
@@ -68,8 +67,8 @@ class App extends Component {
                   tooltip={tooltip}/>
                   
                 <SessionObject
-                  engine={engine}
-                  chartid="chart-3"
+                  engine={this.props.engine}
+                  chartid="pointchart"
                   HyperCubeSpecs={hyperCubeTest}
                   Component={pointChart.Component}
                   Container={ChartContainer}
@@ -84,7 +83,10 @@ class App extends Component {
         </div>
         <div className="footer">
           <div className="wrap">
-           <p>Boilerplates By Malomatia</p>
+            <h2 className="footer-title">License and attributions</h2>
+            <p>Made with <a href="https://github.com/qlik-oss/leonardo-ui=">Leonardo UI</a>, <a href="https://github.com/qlik-oss/enigma.js/">Enigma.js</a>, <a href="https://github.com/qlik-oss/picasso.js">Picasso.js</a> ... and a little of ❤</p>
+            <p>Website design inspired in <a href="https://qlik-oss.github.io/leonardo-ui/">Leonardo's demo page</a>. Fire image created by <a href="https://www.freepik.com/free-photos-vectors/abstract">Freepik</a></p>
+            <p>Licensed under MIT</p>
           </div>
         </div>
       </div>

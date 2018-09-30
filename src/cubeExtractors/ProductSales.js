@@ -16,7 +16,7 @@ this.state={data:null}
           }
     }
 
-    //extracting the data from the hypercube 
+    //extracting the data from the HyperCube 
     createObject(HQ,engine){
         engine.createObject(HQ)
         .then((object) => {
